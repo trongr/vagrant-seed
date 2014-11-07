@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/hackerflow/vagrant/vagrant101","disabled":false},"/home/vagrant/nt":{"create":true,"group":"vagrant","owner":"vagrant","guestpath":"/home/vagrant/nt","hostpath":"C:/Users/hackerflow/vagrant/vagrant101","disabled":false}}}
