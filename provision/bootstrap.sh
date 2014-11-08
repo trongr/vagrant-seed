@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ROOTDIR=/home/vagrant/nt
-CONFGITHUB=https://github.com/trongtruong/conf.git
+CONFGITHUB=https://github.com/trongr/conf.git
 
 DBNAME=testdb
 DBUSER=testuser
