@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "ubuntu/trusty64"
-  config.vm.provision :shell, path: "bootstrap.sh"
+  config.vm.provision :shell, path: "provision/bootstrap.sh"
   config.vm.network :forwarded_port, host: 4567, guest: 80, auto_correct: true
   config.vm.synced_folder ".", "/home/vagrant/nt", create: true, group: "vagrant", owner: "vagrant"
 
