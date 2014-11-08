@@ -1,1 +1,1 @@
-{"virtualbox":{"/home/vagrant/nt":{"create":true,"group":"vagrant","owner":"vagrant","guestpath":"/home/vagrant/nt","hostpath":"C:/Users/hackerflow/vagrant/vagrant101","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/hackerflow/vagrant/vagrant101","disabled":false}}}
+{"virtualbox":{"/home/vagrant/nt":{"create":true,"group":"vagrant","owner":"vagrant","guestpath":"/home/vagrant/nt","hostpath":"C:/Users/trong/vagrant/vagrant101","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/trong/vagrant/vagrant101","disabled":false}}}

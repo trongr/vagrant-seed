@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+ROOTDIR=/home/vagrant/nt
+CONFGITHUB=https://github.com/trongtruong/conf.git
+
 DBNAME=testdb
 DBUSER=testuser
 DBPASS=testpass
-ROOTDIR=/home/vagrant/nt
 
 echo "provisioning vm"
 echo "installing packages"
@@ -18,11 +20,11 @@ apt-get install -y git
 
 echo "installing nginx"
 apt-get install -y nginx
-mv /etc/nginx/sites-enabled/default $ROOTDIR/provision/nginx/sites-enabled/
+cp $ROOTDIR/provision/nginx/sites-enabled/default /etc/nginx/sites-enabled/
 echo "restarting nginx server"
 service nginx restart
 
-# # TODO. comment. don't actually need mysql, just wanted to try out debconfutils
+# # don't actually need mysql, just wanted to try out debconfutils
 # echo "debconf utils configuring mysql server password"
 # debconf-set-selections <<< "mysql-server mysql-server/root_password password $DBPASS"
 # debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $DBPASS"
