@@ -1,6 +1,6 @@
 server {
     listen 80;
-    root /home/vagrant/nt/app/;
+    root /home/vagrant/nt/www/;
 
     location /static/ {
         # access_log off;
