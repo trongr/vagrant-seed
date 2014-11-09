@@ -1,0 +1,7 @@
+VAGRANT
+
+Connection timeout. When you vagrant destroy, you might need to remove ~/.vagrant.d/insecure_private_key before vagrant up.
+
+PUPPET
+
+File path error. e.g. puppet:///modules/nginx/sites-enabled/default refers to modules/nginx/files/sites-enabled/default

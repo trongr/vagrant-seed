@@ -14,7 +14,7 @@ RAM = "1024"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = BOX
 
-  # config.vm.provision :shell, path: "puppet/bootstrap.sh" # bash provision script, not puppet.
+  # config.vm.provision :shell, path: "puppet/bootstrap.sh"
 
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "puppet/manifests"
