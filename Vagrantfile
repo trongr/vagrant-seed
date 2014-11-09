@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     puppet.manifests_path = "puppet/manifests"
     puppet.manifest_file = "default.pp"
     puppet.module_path = "puppet/modules"
-    puppet.options = ['--verbose']
+    puppet.options = ['--verbose'] # --debug --verbose
   end
 
   config.vm.network :forwarded_port, host: 4567, guest: 80, auto_correct: true

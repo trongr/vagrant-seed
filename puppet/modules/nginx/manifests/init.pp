@@ -5,7 +5,7 @@ class nginx {
     require => Class['systemupdate'],
   }
 
-  file { 'copy-default-config':
+  file { '/etc/nginx/sites-enabled/default':
     ensure => file,
     path => '/etc/nginx/sites-enabled/default',
     source => 'puppet:///modules/nginx/sites-enabled/default',
@@ -17,7 +17,7 @@ class nginx {
     ensure => running,
     require => [
         Package['nginx'],
-        File['copy-default-config']
+        File['/etc/nginx/sites-enabled/default']
     ]
   }
 }
