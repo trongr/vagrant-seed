@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ROOTDIR=/home/vagrant/nt
+ROOTDIR=/home/vagrant/nv
 # CONFGITHUB=https://github.com/trongr/conf.git # don't really need this since we have sync folders
 
 DBNAME=testdb

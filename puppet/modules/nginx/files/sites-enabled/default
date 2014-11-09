@@ -1,9 +1,9 @@
 server {
     listen 80;
-    root /home/vagrant/nt/www/;
+    root /home/vagrant/nv/www/;
 
     location /static/ {
-        # access_log off;
+        # access_log off; # TODO. turn on logging and log archiving
     }
 
     location / {
