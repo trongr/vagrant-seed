@@ -78,8 +78,11 @@ class nodejs {
 }
 
 class npmpackages {
+    # TODO if these work add them to npm install -g:
+    # karma bower...
     exec { "npminstallglobal":
-        command => "npm install -g yo karma bower grunt-cli",
+        command => "npm install -g karma bower grunt-cli express-generator \
+                    yo",
         require => Class["nodejs"]
     }
 }
