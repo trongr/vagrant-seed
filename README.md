@@ -1,6 +1,8 @@
 INSTALLATION
+============
 
 Install virtualbox
+
 Install vagrant
 
     git clone THIS_REPO nv
