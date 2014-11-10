@@ -78,13 +78,8 @@ class nodejs {
 }
 
 class npmpackages {
-    exec { "npm install yo":
-        command => "npm install -g yo",
-        require => Class["nodejs"]
-    }
-
-    exec { "npm install grunt-cli":
-        command => "npm install -g grunt-cli",
+    exec { "npminstallglobal":
+        command => "npm install -g yo karma bower grunt-cli",
         require => Class["nodejs"]
     }
 }
