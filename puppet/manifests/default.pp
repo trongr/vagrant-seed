@@ -1,4 +1,4 @@
-Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/", "/usr/local/bin/", "/usr/local/sbin/", ] }
+Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/", "/usr/local/bin/", "/usr/local/sbin/" ] }
 
 class aptgetupdate {
     exec { "apt-get update":
@@ -17,23 +17,6 @@ class devtools {
         require => Class["aptgetupdate"]
     }
 
-}
-
-class configs {
-    file { '/home/vagrant':
-        ensure => directory,
-        path => '/home/vagrant',
-        source => "puppet:///modules/configs/homevagrant",
-        recurse => true,
-        owner => "vagrant",
-        group => "vagrant",
-        mode => 0644
-    }
-
-    # file to log your terminal commands, used in .bashrc
-    file { "/home/vagrant/nv/logs":
-        ensure => directory,
-    }
 }
 
 class nginx {
@@ -61,7 +44,8 @@ class nginx {
 
 class nodejs {
   exec { "git_clone_n":
-    command => "git clone https://github.com/visionmedia/n.git /home/vagrant/n",
+    command => "rm -rf n && git clone https://github.com/visionmedia/n.git n",
+    cwd => "/home/vagrant",
     require => [Class["aptgetupdate"], Class["devtools"]]
   }
 
@@ -100,5 +84,4 @@ class mongodb {
 }
 
 include aptgetupdate, devtools
-# include configs # disable for now cause linux doesn't understand windows line endings
 include nginx, nodejs, npmpackages, mongodb
