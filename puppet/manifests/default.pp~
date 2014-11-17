@@ -12,7 +12,7 @@ class devtools {
         require => Class["aptgetupdate"]
     }
 
-    package { ["curl", "wget", "htop", "g++", "build-essential"]:
+    package { ["curl", "wget", "htop", "g++"]:
         ensure => present,
         require => Class["aptgetupdate"]
     }
