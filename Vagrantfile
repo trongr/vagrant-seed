@@ -26,6 +26,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.network :forwarded_port, host: 4567, guest: 80, auto_correct: true
+  config.vm.network :forwarded_port, host: 8080, guest: 8080, auto_correct: true
   config.vm.synced_folder ".", "/home/vagrant/nv", create: true, group: GROUP, owner: OWNER
   # store all your dev stuff, e.g. cpp projects in ~/vm, so it's accessible in vm
   config.vm.synced_folder "~/vm", "/home/vagrant/vm", create: true, group: GROUP, owner: OWNER
